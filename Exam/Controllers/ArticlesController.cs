@@ -122,7 +122,7 @@ namespace Exam.Controllers
         public HttpResponseMessage AllAuthors()
         {
             string query = @"
-                select AuthorName from dbo.Authors";
+                select AuthorName, AuthorId from dbo.Authors";
 
             DataTable table = new DataTable();
             using (var con = new SqlConnection(ConfigurationManager.
